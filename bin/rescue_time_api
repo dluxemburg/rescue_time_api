@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+
+unless ARGV[0]
+  puts "Must supply an API key as first argument"
+  exit
+end
+
+require 'rescue_time_api'
+
+client = RescueTimeApi::Client.new(key: ARGV[0])
+
+require 'pry'
+
+Pry.start(client, quiet: true, prompt: [ proc { "RescueTimeApi::Client > " } ])
