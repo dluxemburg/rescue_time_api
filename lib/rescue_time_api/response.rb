@@ -36,7 +36,7 @@ module RescueTimeApi
           "Time Spent (seconds)" => 'seconds',
           "Number of People" => 'people',
           "Activity" => 'activity',
-          "Category" => 'categoty',
+          "Category" => 'category',
           "Productivity" => 'productivity',
           "Date" => "date"
         }
